@@ -70,7 +70,7 @@ const [error, setError] = useState(null);
 			const jsonData = JSON.stringify(sliderValues);
 
 			// Send POST request with JSON body
-			const response = await fetch("https://mini-backend-7mvj.onrender.com/", {
+			const response = await fetch("https://mini-backend-1.onrender.com", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
