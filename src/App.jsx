@@ -6,6 +6,7 @@ import { BrowserRouter, Routes , Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import {store} from './redux/store'
 import Result from "./components/Result";
+import JobPredictionLandingPage from "./components/Landing";
 
 const sliderConfig = {
 	technical: [
@@ -170,7 +171,8 @@ function App(){
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Technical/>} />
+				<Route path="/" element={<JobPredictionLandingPage/>} />
+				<Route path='/technical' element={<Technical/>}/>
 				<Route path="/nonTechnical" element={<NonTechnical/>} />
 				<Route path="/result" element={<Result/>}/>
 			</Routes>

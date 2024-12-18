@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "./Slider";
 import { useSelector,useDispatch } from "react-redux";
 import { setValue } from "../redux/slider/sliderSlicer";
+import Footer from "./Footer";
 
 
 function NonTechnical(params) {
@@ -31,7 +32,7 @@ function NonTechnical(params) {
 		Object.values(sliderConfig.nonTechnical)
 			.flat()
 			.reduce((acc, skill) => {
-				acc[skill] = 0; // Default slider value
+				acc[skill] = 1; // Default slider value
 				return acc;
 			}, {})
 	);
@@ -50,7 +51,7 @@ function NonTechnical(params) {
 					? "Technical Skills"
 					: "Personality & Soft Skills"}
 			</h2>
-			<div className="grid grid-cols-2 gap-4">
+			<div className="flex flex-col gap-4">
 				{sliderConfig[group].map((skill) => (
 					<Slider
 						key={skill}
@@ -80,20 +81,29 @@ function NonTechnical(params) {
 	};
 
 	return (
-		<div className="container mx-auto px-4 py-8 max-w-5xl">
-			<h1 className="text-3xl font-bold mb-6 text-center">
-				Job Role Prediction
-			</h1>
-			<form  className="space-y-8">
+		<div className="min-h-screen bg-white">
+						<nav className="container mx-auto px-4 py-6 flex justify-between items-center  border-b">
+				<div onClick={()=>{
+					navigate("/")
+				}} className="text-2xl font-bold text-blue-600 cursor-pointer">JobPredict</div>
+
+			</nav>
+		<div className="container mx-auto px-4 mb-16 py-8 max-w-5xl mt-8">
+			<form  className="space-y-24">
 				{renderSliderGroup("nonTechnical")}
 				<button
 					onClick={handleBottonCLick}
-					className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300"
+					className="w-full bg-blue-500 text-white py-5 rounded hover:bg-blue-600 hover:shadow-lg transition duration-300 "
 				>
 					Predict Role
 				</button>
 			</form>
 		</div>
+					<div className="bg-white text-black  border-t">
+					<Footer/>
+					</div>
+					</div>
+		
 	);
 }
 
