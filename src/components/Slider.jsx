@@ -32,7 +32,7 @@ const Slider = ({
       </div>
       <div className="flex justify-between mt-2">
         <span className="text-sm font-medium text-gray-500">{min}</span>
-        <span className="text-sm font-medium text-gray-500">{value}</span>
+        <span className="text-2xl font-bold mt-1 text-gray-500">{value}</span>
         <span className="text-sm font-medium text-gray-500">{max}</span>
       </div>
     </div>

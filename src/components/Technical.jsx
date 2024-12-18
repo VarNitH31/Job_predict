@@ -36,7 +36,7 @@ function Technical(params) {
 		Object.values(sliderConfig.technical)
 			.flat()
 			.reduce((acc, skill) => {
-				acc[skill] = 0; // Default slider value
+				acc[skill] = 1; // Default slider value
 				return acc;
 			}, {})
 	);
