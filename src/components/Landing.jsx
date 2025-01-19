@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { ChevronRight, TrendingUp, Target, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import AlertDialog from './Mui/Dialogue';
+
+
 
 const JobPredictionLandingPage = () => {
   const [email, setEmail] = useState('');
@@ -9,8 +12,18 @@ const JobPredictionLandingPage = () => {
 
   const handleEmailSubmit = (e) => {
     e.preventDefault();
-    // Implement email capture logic here
-    alert(`Email submitted: ${email}`);
+    
+    // Regular expression for basic email validation
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  
+    // Check if the email matches the regex
+    if (!emailRegex.test(email)) {
+      setEmail("enter valid Email ID");
+      return;
+    }
+
+    localStorage.setItem('email', email);
+    handleRedirect();
   };
 
   const handleRedirect=(e)=>{
@@ -51,10 +64,11 @@ const JobPredictionLandingPage = () => {
             required
           />
           <button 
-            type="submit" 
+            type='submit'
+            onClick={handleEmailSubmit}
             className="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition flex items-center"
           >
-            Get Early Access <ChevronRight className="ml-2" />
+            Try it out <ChevronRight className="ml-2" />
           </button>
         </form>
       </header>
@@ -140,12 +154,12 @@ const JobPredictionLandingPage = () => {
           </button>
         </div>
       </section>
-
       {/* Footer */}
       <div className='bg-gray-900 text-white' >
             <Footer/>
       </div>
     </div>
+
   );
 };
 
