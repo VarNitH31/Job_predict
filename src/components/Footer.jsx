@@ -6,7 +6,7 @@ function Footer() {
     <div className="container mx-auto px-4 text-center">
       <div className="text-2xl font-bold mb-4 text-blue-500">JobPredict</div>
       <p className="text-gray-400 mb-6">
-        Empowering professionals with AI-driven career insights
+        Empowering students with ML-driven career prediction
       </p>
       <div className="space-x-4">
         <a href="#" className="text-gray-300 hover:text-white">About</a>

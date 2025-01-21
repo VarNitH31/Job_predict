@@ -47,10 +47,10 @@ const JobPredictionLandingPage = () => {
       {/* Hero Section */}
       <header className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Predict Your Career Future <br /> with AI-Powered Insights
+          Predict Your Career Future <br /> with power of Machine Learning
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Leverage advanced machine learning to forecast job market trends, 
+          Leverage advanced machine learning to analyse career interests, 
           identify emerging opportunities, and make data-driven career decisions.
         </p>
         
@@ -80,26 +80,26 @@ const JobPredictionLandingPage = () => {
             Powerful Features for Career Insight
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our AI-driven platform provides comprehensive career prediction and guidance.
+            Our ML-driven platform provides comprehensive career prediction and guidance.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              icon: <TrendingUp className="w-12 h-12 text-blue-600" />,
-              title: "Market Trends",
-              description: "Real-time analysis of job market dynamics and emerging industries."
-            },
-            {
               icon: <Target className="w-12 h-12 text-blue-600" />,
               title: "Personalized Predictions",
               description: "Tailored career forecasts based on your skills, experience, and goals."
             },
             {
+              icon: <TrendingUp className="w-12 h-12 text-blue-600" />,
+              title: "Feedback",
+              description: "Not happy with prediction? Write to us in feedback and re-analyse!"
+            },
+            {
               icon: <Globe className="w-12 h-12 text-blue-600" />,
-              title: "Global Insights",
-              description: "Comprehensive job market intelligence across different regions and sectors."
+              title: "Immediate aids",
+              description: "Dont know where to continue? Job opportunities listed along with the prediction"
             }
           ].map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -111,21 +111,20 @@ const JobPredictionLandingPage = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
       <section id="how-it-works" className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             How JobPredict Works
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our advanced AI analyzes multiple data points to provide accurate career predictions.
+            Our advanced model analyzes multiple data points to provide accurate career predictions.
           </p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-8">
           {[
-            { step: "1", title: "Create Profile", description: "Input your professional details and career goals." },
-            { step: "2", title: "Data Analysis", description: "Our AI processes market trends and your unique profile." },
+            { step: "1", title: "Create Profile", description: "Input your email ID and get started." },
+            { step: "2", title: "Data Analysis", description: "Our model processes your skills, technical and non-technical." },
             { step: "3", title: "Generate Insights", description: "Receive personalized career prediction reports." },
             { step: "4", title: "Take Action", description: "Make informed decisions about your professional development." }
           ].map((item, index) => (
@@ -147,7 +146,7 @@ const JobPredictionLandingPage = () => {
             Ready to Shape Your Career Future?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals leveraging AI to make smarter career decisions.
+            Join thousands of professionals leveraging ML to make smarter career decisions.
           </p>
           <button onClick={handleRedirect} className="bg-white text-blue-600 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition">
             Start Your Career Journey

@@ -52,8 +52,8 @@ export default function AlertDialog() {
     };
 
     try {
-      // const response = await axios.post("http://localhost:3000/update", data);
-      const response = await axios.post("https://flourishing-crisp-83b372.netlify.app/", data);
+      const response = await axios.post("http://localhost:3000/update", data);
+      // const response = await axios.post("https://flourishing-crisp-83b372.netlify.app/", data);
       console.log("Data submitted successfully:", response.data);
       localStorage.setItem('prediction',null)
       localStorage.setItem('email',null)
